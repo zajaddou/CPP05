@@ -37,7 +37,6 @@ Bureaucrat::~Bureaucrat()
     std::cout << _name << ", Deleted !" << std::endl;
 }
 
-
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
     if (this != &other)

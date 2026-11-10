@@ -37,12 +37,13 @@ Bureaucrat::~Bureaucrat()
     std::cout << _name << ", Deleted !" << std::endl;
 }
 
-
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 {
     if (this != &other)
+    {
         this->_grade = other._grade;
-    std::cout << this->_name << ", Assignment !" << std::endl;
+        std::cout << this->_name << ", Assignment !" << std::endl;
+    }
     return (*this);
 }
 
