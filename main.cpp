@@ -1,25 +1,14 @@
-#include <iostream>
 
-class Car
-{
-    public:
-        class Engine
-        {
-            public:
-                void start();
-        };
-};
-
-void Car::Engine::start()
-{
-    std::cout << "vroom" << std::endl;
-}
+#include "Bureaucrat.hpp"
 
 int main()
 {
-    Car::Engine e;
-    
-    e.start();
-
+    try {
+        throw Bureaucrat::GradeTooLowException();
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
     return 0;
 }
